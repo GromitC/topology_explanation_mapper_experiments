@@ -58,7 +58,7 @@ def drawGraph(ax,graph,labels,title=''):
     ax.set_yticks([])
     node_sizes = max([sum(piecharts[node]) for node in piecharts])
     def linear(x):
-        return x / node_sizes * 0.1
+        return x / node_sizes * 0.3
 
     # storing attributes in a dict
     attrs = piecharts
