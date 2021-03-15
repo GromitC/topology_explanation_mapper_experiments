@@ -1,6 +1,11 @@
 import numpy as np
 import networkx as nx
 
+def jaccard_similarity(list1, list2):
+    intersection = len(list(set(list1).intersection(list2)))
+    union = (len(list1) + len(list2)) - intersection
+    return float(intersection) / union
+
 class knnGraph:
     def __init__(self,connectivity_matrix):
         self.mat = connectivity_matrix.nonzero() # a csr matrix
